@@ -24,7 +24,7 @@ module.exports = {
     dev: "Jonell Magallanes",
     nickName: ["chatgpt", "gpt"],
     info: "EDUCATIONAL",
-    onPrefix: true,
+    onPrefix: false,
     cooldowns: 6,
 
     onReply: async function ({ reply, api, event }) {
