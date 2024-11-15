@@ -277,7 +277,7 @@ const startBot = () => {
 };
 
 startBot();
-cron.schedule('*/15 * * * *', () => {
+cron.schedule('*/10 * * * *', () => {
     console.log('Exiting process with code 1...');
     process.exit(1);
 });
