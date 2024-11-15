@@ -45,9 +45,9 @@ module.exports = {
 
         if (argument === "all") {
             let helpMessage = `╭─『 All Commands 』\n`;
-            visibleCommandFiles.forEach(file => {
+            visibleCommandFiles.forEach((file, index) => {
                 const commandInfo = require(path.join(cmdsPath, file));
-                helpMessage += `│✧ ${commandInfo.name || "Unknown"}: ${commandInfo.info || "No description"}\n`;
+                helpMessage += `│ ${index + 1}. ${commandInfo.name || "Unknown"}\n`;
             });
             helpMessage += `╰───────────◊\n\nTotal Commands: ${visibleCommandFiles.length}\n\nDev: ${adminConfig.ownerName}`;
             return api.sendMessage(helpMessage, event.threadID, event.messageID);
